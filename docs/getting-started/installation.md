@@ -4,7 +4,7 @@ order: 2
 
 # Installation
 
-This guide will explain how to install the `gaiad` binary and run the cli.
+This guide will explain how to install the `gaiad` binary and run the cli. With this binary installed on a server, you can participate on the mainnet as either a [Full Node](./hub-tutorials/join-mainnet.md) or a [Validator](../validators/validator-setup.md).
 
 ## Build Requirements
 
@@ -38,17 +38,17 @@ Install Go one of two ways. Check out the [official docs](https://golang.org/doc
 
 **Ubuntu:**
 
-At the time of this writing, the latest release is `1.16.7`. We're going to download the tarball, extract it to `/usr/local`, and export `GOROOT` to our `$PATH`
+At the time of this writing, the latest release is `1.17.4`. We're going to download the tarball, extract it to `/usr/local`, and export `GOROOT` to our `$PATH`
 ```bash
-curl -OL https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
+curl -OL https://golang.org/dl/go1.17.4.linux-amd64.tar.gz
 
-sudo tar -C /usr/local -xvf go1.16.7.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvf go1.17.4.linux-amd64.tar.gz
 
 export PATH=$PATH:/usr/local/go/bin
 
 ```
 
-Remember to add `GOPATH` to your `$PATH` environment variable. If you're not sure where that is, run `go env GOPATH`. This will allow us to run the `gaiad` binary in the next step.
+Remember to add `GOPATH` to your `$PATH` environment variable. If you're not sure where that is, run `go env GOPATH`. This will allow us to run the `gaiad` binary in the next step. If you're not sure how to set your `$PATH` take a look at [these instructions](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them).
 
 ```bash
 export PATH=$PATH:$(go env GOPATH)/bin
